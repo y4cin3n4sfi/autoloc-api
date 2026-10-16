@@ -1,0 +1,18 @@
+$kind: http-request
+url: "{{baseUrl}}/client/modify-client"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "idClient": 1,
+      "nom": "Ben Salah",
+      "prenom": "Ahmed",
+      "email": "ahmed.bensalah@email.com",
+      "telephone": "+216 22 999 888",
+      "numPermis": "TN123456",
+      "dateInscription": "2026-10-16"
+    }
+order: 4000

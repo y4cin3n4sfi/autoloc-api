@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{baseUrl}}/contrat/add-contrat"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "dateSignature": "2026-10-16",
+      "montantTotal": 600.00,
+      "valide": true
+    }
+order: 1000

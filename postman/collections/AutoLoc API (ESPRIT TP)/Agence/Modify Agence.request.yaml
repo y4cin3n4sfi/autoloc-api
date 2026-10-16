@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{baseUrl}}/agence/modify-agence"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "idAgence": 1,
+      "nom": "Agence Tunis Centre (Modifiee)",
+      "ville": "Tunis",
+      "adresse": "Avenue Habib Bourguiba, Tunis",
+      "telephone": "+216 71 999 888"
+    }
+order: 4000

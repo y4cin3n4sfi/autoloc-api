@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{baseUrl}}/equipement/add-equipement"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "libelle": "GPS Navigation"
+    }
+order: 1000

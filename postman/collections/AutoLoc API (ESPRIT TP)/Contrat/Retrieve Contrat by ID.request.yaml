@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{baseUrl}}/contrat/retrieve-contrat/1"
+method: GET
+order: 3000

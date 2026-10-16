@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{baseUrl}}/maintenance/retrieve-all-maintenances"
+method: GET
+order: 2000

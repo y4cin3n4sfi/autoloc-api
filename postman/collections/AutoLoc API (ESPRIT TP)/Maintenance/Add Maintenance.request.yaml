@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{baseUrl}}/maintenance/add-maintenance"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "dateDebut": "2026-10-10",
+      "dateFin": "2026-10-12",
+      "description": "Vidange et changement de filtres"
+    }
+order: 1000

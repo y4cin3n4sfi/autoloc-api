@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{baseUrl}}/vehicule/retrieve-vehicule/1"
+method: GET
+order: 3000

@@ -1,0 +1,4 @@
+$kind: collection
+description: Collection de tests REST pour l'application AutoLoc API selon le format du TP ESPRIT.
+variables:
+  baseUrl: http://localhost:8089/autoloc

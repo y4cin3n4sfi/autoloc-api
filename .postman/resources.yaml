@@ -2,6 +2,12 @@
 workspace:
   id: 319476fc-a38b-4bbb-8b51-4d52786babe2
 
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ../postman/collections/AutoLoc API (ESPRIT TP): 7b0492cb-1d59-4dbe-8d69-341e97666270
+
 # All resources in the `postman/` folder are automatically registered in Local View.
 # Point to additional files outside the `postman/` folder to register them individually. Example:
 #localResources:

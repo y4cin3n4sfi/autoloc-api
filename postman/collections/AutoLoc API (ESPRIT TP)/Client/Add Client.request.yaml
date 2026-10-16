@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{baseUrl}}/client/add-client"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "nom": "Ben Salah",
+      "prenom": "Ahmed",
+      "email": "ahmed.bensalah@email.com",
+      "telephone": "+216 22 123 456",
+      "numPermis": "TN123456",
+      "dateInscription": "2026-10-16"
+    }
+order: 1000

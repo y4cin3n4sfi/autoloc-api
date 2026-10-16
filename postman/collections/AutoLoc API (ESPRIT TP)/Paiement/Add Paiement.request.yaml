@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{baseUrl}}/paiement/add-paiement"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "montant": 300.00,
+      "datePaiement": "2026-10-16",
+      "modePaiement": "CARTE_BANCAIRE"
+    }
+order: 1000

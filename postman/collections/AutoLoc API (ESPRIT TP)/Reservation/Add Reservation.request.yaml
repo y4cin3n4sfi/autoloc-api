@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{baseUrl}}/reservation/add-reservation"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "dateDebut": "2026-10-20",
+      "dateFin": "2026-10-25",
+      "statut": "CONFIRMEE"
+    }
+order: 1000

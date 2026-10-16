@@ -1,0 +1,18 @@
+$kind: http-request
+url: "{{baseUrl}}/vehicule/modify-vehicule"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "idVehicule": 1,
+      "immatriculation": "220-TUN-1234",
+      "marque": "Volkswagen",
+      "modele": "Golf 8",
+      "categorie": "BERLINE",
+      "tarifJournalier": 130.00,
+      "statut": "LOUE"
+    }
+order: 4000
