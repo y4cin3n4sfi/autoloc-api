@@ -19,4 +19,15 @@ public interface VehiculeService {
     Vehicule getVehiculeByImmatriculation(String immatriculation);
 
     List<Vehicule> getVehiculesByAgenceId(Long idAgence);
+
+    // ESPRIT convention methods
+    Vehicule addVehicule(Vehicule vehicule);
+
+    Vehicule retrieveVehicule(Long idVehicule);
+
+    List<Vehicule> retrieveAllVehicules();
+
+    Vehicule modifyVehicule(Vehicule vehicule);
+
+    void removeVehicule(Long idVehicule);
 }

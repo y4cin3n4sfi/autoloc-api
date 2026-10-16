@@ -58,4 +58,33 @@ public class EmployeServiceImpl implements EmployeService {
     public List<Employe> getEmployesByAgenceId(Long idAgence) {
         return employeRepository.findByAgenceIdAgence(idAgence);
     }
+
+    // ESPRIT convention implementations
+    @Override
+    @Transactional
+    public Employe addEmploye(Employe employe) {
+        return saveEmploye(employe);
+    }
+
+    @Override
+    public Employe retrieveEmploye(Long idEmploye) {
+        return getEmployeById(idEmploye);
+    }
+
+    @Override
+    public List<Employe> retrieveAllEmployes() {
+        return getAllEmployes();
+    }
+
+    @Override
+    @Transactional
+    public Employe modifyEmploye(Employe employe) {
+        return employeRepository.save(employe);
+    }
+
+    @Override
+    @Transactional
+    public void removeEmploye(Long idEmploye) {
+        deleteEmploye(idEmploye);
+    }
 }

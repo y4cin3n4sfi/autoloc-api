@@ -50,4 +50,33 @@ public class EquipementServiceImpl implements EquipementService {
         }
         equipementRepository.deleteById(idEquipement);
     }
+
+    // ESPRIT convention implementations
+    @Override
+    @Transactional
+    public Equipement addEquipement(Equipement equipement) {
+        return saveEquipement(equipement);
+    }
+
+    @Override
+    public Equipement retrieveEquipement(Long idEquipement) {
+        return getEquipementById(idEquipement);
+    }
+
+    @Override
+    public List<Equipement> retrieveAllEquipements() {
+        return getAllEquipements();
+    }
+
+    @Override
+    @Transactional
+    public Equipement modifyEquipement(Equipement equipement) {
+        return equipementRepository.save(equipement);
+    }
+
+    @Override
+    @Transactional
+    public void removeEquipement(Long idEquipement) {
+        deleteEquipement(idEquipement);
+    }
 }

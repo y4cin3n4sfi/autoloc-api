@@ -17,4 +17,15 @@ public interface EmployeService {
     void deleteEmploye(Long idEmploye);
 
     List<Employe> getEmployesByAgenceId(Long idAgence);
+
+    // ESPRIT convention methods
+    Employe addEmploye(Employe employe);
+
+    Employe retrieveEmploye(Long idEmploye);
+
+    List<Employe> retrieveAllEmployes();
+
+    Employe modifyEmploye(Employe employe);
+
+    void removeEmploye(Long idEmploye);
 }

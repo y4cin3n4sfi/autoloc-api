@@ -59,4 +59,33 @@ public class ContratServiceImpl implements ContratService {
         return contratRepository.findByReservationIdReservation(idReservation)
                 .orElseThrow(() -> new ResourceNotFoundException("Contrat not found for reservation id: " + idReservation));
     }
+
+    // ESPRIT convention implementations
+    @Override
+    @Transactional
+    public Contrat addContrat(Contrat contrat) {
+        return saveContrat(contrat);
+    }
+
+    @Override
+    public Contrat retrieveContrat(Long idContrat) {
+        return getContratById(idContrat);
+    }
+
+    @Override
+    public List<Contrat> retrieveAllContrats() {
+        return getAllContrats();
+    }
+
+    @Override
+    @Transactional
+    public Contrat modifyContrat(Contrat contrat) {
+        return contratRepository.save(contrat);
+    }
+
+    @Override
+    @Transactional
+    public void removeContrat(Long idContrat) {
+        deleteContrat(idContrat);
+    }
 }

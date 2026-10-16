@@ -58,4 +58,33 @@ public class MaintenanceServiceImpl implements MaintenanceService {
     public List<Maintenance> getMaintenancesByVehiculeId(Long idVehicule) {
         return maintenanceRepository.findByVehiculeIdVehicule(idVehicule);
     }
+
+    // ESPRIT convention implementations
+    @Override
+    @Transactional
+    public Maintenance addMaintenance(Maintenance maintenance) {
+        return saveMaintenance(maintenance);
+    }
+
+    @Override
+    public Maintenance retrieveMaintenance(Long idMaintenance) {
+        return getMaintenanceById(idMaintenance);
+    }
+
+    @Override
+    public List<Maintenance> retrieveAllMaintenances() {
+        return getAllMaintenances();
+    }
+
+    @Override
+    @Transactional
+    public Maintenance modifyMaintenance(Maintenance maintenance) {
+        return maintenanceRepository.save(maintenance);
+    }
+
+    @Override
+    @Transactional
+    public void removeMaintenance(Long idMaintenance) {
+        deleteMaintenance(idMaintenance);
+    }
 }

@@ -53,4 +53,33 @@ public class AgenceServiceImpl implements AgenceService {
         }
         agenceRepository.deleteById(idAgence);
     }
+
+    // ESPRIT convention implementations
+    @Override
+    @Transactional
+    public Agence addAgence(Agence agence) {
+        return saveAgence(agence);
+    }
+
+    @Override
+    public Agence retrieveAgence(Long idAgence) {
+        return getAgenceById(idAgence);
+    }
+
+    @Override
+    public List<Agence> retrieveAllAgences() {
+        return getAllAgences();
+    }
+
+    @Override
+    @Transactional
+    public Agence modifyAgence(Agence agence) {
+        return agenceRepository.save(agence);
+    }
+
+    @Override
+    @Transactional
+    public void removeAgence(Long idAgence) {
+        deleteAgence(idAgence);
+    }
 }

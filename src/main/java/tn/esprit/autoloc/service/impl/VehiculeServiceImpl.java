@@ -68,4 +68,33 @@ public class VehiculeServiceImpl implements VehiculeService {
     public List<Vehicule> getVehiculesByAgenceId(Long idAgence) {
         return vehiculeRepository.findByAgenceIdAgence(idAgence);
     }
+
+    // ESPRIT convention implementations
+    @Override
+    @Transactional
+    public Vehicule addVehicule(Vehicule vehicule) {
+        return saveVehicule(vehicule);
+    }
+
+    @Override
+    public Vehicule retrieveVehicule(Long idVehicule) {
+        return getVehiculeById(idVehicule);
+    }
+
+    @Override
+    public List<Vehicule> retrieveAllVehicules() {
+        return getAllVehicules();
+    }
+
+    @Override
+    @Transactional
+    public Vehicule modifyVehicule(Vehicule vehicule) {
+        return vehiculeRepository.save(vehicule);
+    }
+
+    @Override
+    @Transactional
+    public void removeVehicule(Long idVehicule) {
+        deleteVehicule(idVehicule);
+    }
 }

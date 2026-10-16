@@ -67,4 +67,33 @@ public class ClientServiceImpl implements ClientService {
         return clientRepository.findByNumPermis(numPermis)
                 .orElseThrow(() -> new ResourceNotFoundException("Client not found with driver license number: " + numPermis));
     }
+
+    // ESPRIT convention implementations
+    @Override
+    @Transactional
+    public Client addClient(Client client) {
+        return saveClient(client);
+    }
+
+    @Override
+    public Client retrieveClient(Long idClient) {
+        return getClientById(idClient);
+    }
+
+    @Override
+    public List<Client> retrieveAllClients() {
+        return getAllClients();
+    }
+
+    @Override
+    @Transactional
+    public Client modifyClient(Client client) {
+        return clientRepository.save(client);
+    }
+
+    @Override
+    @Transactional
+    public void removeClient(Long idClient) {
+        deleteClient(idClient);
+    }
 }

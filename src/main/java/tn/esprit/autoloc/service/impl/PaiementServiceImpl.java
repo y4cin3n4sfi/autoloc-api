@@ -58,4 +58,33 @@ public class PaiementServiceImpl implements PaiementService {
     public List<Paiement> getPaiementsByContratId(Long idContrat) {
         return paiementRepository.findByContratIdContrat(idContrat);
     }
+
+    // ESPRIT convention implementations
+    @Override
+    @Transactional
+    public Paiement addPaiement(Paiement paiement) {
+        return savePaiement(paiement);
+    }
+
+    @Override
+    public Paiement retrievePaiement(Long idPaiement) {
+        return getPaiementById(idPaiement);
+    }
+
+    @Override
+    public List<Paiement> retrieveAllPaiements() {
+        return getAllPaiements();
+    }
+
+    @Override
+    @Transactional
+    public Paiement modifyPaiement(Paiement paiement) {
+        return paiementRepository.save(paiement);
+    }
+
+    @Override
+    @Transactional
+    public void removePaiement(Long idPaiement) {
+        deletePaiement(idPaiement);
+    }
 }

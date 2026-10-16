@@ -64,4 +64,33 @@ public class ReservationServiceImpl implements ReservationService {
     public List<Reservation> getReservationsByVehiculeId(Long idVehicule) {
         return reservationRepository.findByVehiculeIdVehicule(idVehicule);
     }
+
+    // ESPRIT convention implementations
+    @Override
+    @Transactional
+    public Reservation addReservation(Reservation reservation) {
+        return saveReservation(reservation);
+    }
+
+    @Override
+    public Reservation retrieveReservation(Long idReservation) {
+        return getReservationById(idReservation);
+    }
+
+    @Override
+    public List<Reservation> retrieveAllReservations() {
+        return getAllReservations();
+    }
+
+    @Override
+    @Transactional
+    public Reservation modifyReservation(Reservation reservation) {
+        return reservationRepository.save(reservation);
+    }
+
+    @Override
+    @Transactional
+    public void removeReservation(Long idReservation) {
+        deleteReservation(idReservation);
+    }
 }

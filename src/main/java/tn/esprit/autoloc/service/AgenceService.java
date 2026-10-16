@@ -15,4 +15,15 @@ public interface AgenceService {
     List<Agence> getAllAgences();
 
     void deleteAgence(Long idAgence);
+
+    // ESPRIT convention methods
+    Agence addAgence(Agence agence);
+
+    Agence retrieveAgence(Long idAgence);
+
+    List<Agence> retrieveAllAgences();
+
+    Agence modifyAgence(Agence agence);
+
+    void removeAgence(Long idAgence);
 }

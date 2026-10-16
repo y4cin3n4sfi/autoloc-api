@@ -1,0 +1,530 @@
+{
+  "info": {
+    "_postman_id": "7b0492cb-1d59-4dbe-8d69-341e97666270",
+    "name": "AutoLoc API (ESPRIT TP)",
+    "description": "Collection de tests REST pour l'application AutoLoc API selon le format du TP ESPRIT.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8089/autoloc",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Agence",
+      "item": [
+        {
+          "name": "Add Agence",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Agence Tunis Centre\",\n  \"ville\": \"Tunis\",\n  \"adresse\": \"Avenue Habib Bourguiba, Tunis\",\n  \"telephone\": \"+216 71 000 111\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/agence/add-agence",
+              "host": ["{{baseUrl}}"],
+              "path": ["agence", "add-agence"]
+            }
+          }
+        },
+        {
+          "name": "Retrieve All Agences",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/agence/retrieve-all-agences",
+              "host": ["{{baseUrl}}"],
+              "path": ["agence", "retrieve-all-agences"]
+            }
+          }
+        },
+        {
+          "name": "Retrieve Agence by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/agence/retrieve-agence/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["agence", "retrieve-agence", "1"]
+            }
+          }
+        },
+        {
+          "name": "Modify Agence",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idAgence\": 1,\n  \"nom\": \"Agence Tunis Centre (Modifiee)\",\n  \"ville\": \"Tunis\",\n  \"adresse\": \"Avenue Habib Bourguiba, Tunis\",\n  \"telephone\": \"+216 71 999 888\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/agence/modify-agence",
+              "host": ["{{baseUrl}}"],
+              "path": ["agence", "modify-agence"]
+            }
+          }
+        },
+        {
+          "name": "Remove Agence",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/agence/remove-agence/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["agence", "remove-agence", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Client",
+      "item": [
+        {
+          "name": "Add Client",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Ben Salah\",\n  \"prenom\": \"Ahmed\",\n  \"email\": \"ahmed.bensalah@email.com\",\n  \"telephone\": \"+216 22 123 456\",\n  \"numPermis\": \"TN123456\",\n  \"dateInscription\": \"2026-10-16\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/client/add-client",
+              "host": ["{{baseUrl}}"],
+              "path": ["client", "add-client"]
+            }
+          }
+        },
+        {
+          "name": "Retrieve All Clients",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/client/retrieve-all-clients",
+              "host": ["{{baseUrl}}"],
+              "path": ["client", "retrieve-all-clients"]
+            }
+          }
+        },
+        {
+          "name": "Retrieve Client by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/client/retrieve-client/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["client", "retrieve-client", "1"]
+            }
+          }
+        },
+        {
+          "name": "Modify Client",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idClient\": 1,\n  \"nom\": \"Ben Salah\",\n  \"prenom\": \"Ahmed\",\n  \"email\": \"ahmed.bensalah@email.com\",\n  \"telephone\": \"+216 22 999 888\",\n  \"numPermis\": \"TN123456\",\n  \"dateInscription\": \"2026-10-16\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/client/modify-client",
+              "host": ["{{baseUrl}}"],
+              "path": ["client", "modify-client"]
+            }
+          }
+        },
+        {
+          "name": "Remove Client",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/client/remove-client/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["client", "remove-client", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Vehicule",
+      "item": [
+        {
+          "name": "Add Vehicule",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"immatriculation\": \"220-TUN-1234\",\n  \"marque\": \"Volkswagen\",\n  \"modele\": \"Golf 8\",\n  \"categorie\": \"BERLINE\",\n  \"tarifJournalier\": 120.00,\n  \"statut\": \"DISPONIBLE\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/vehicule/add-vehicule",
+              "host": ["{{baseUrl}}"],
+              "path": ["vehicule", "add-vehicule"]
+            }
+          }
+        },
+        {
+          "name": "Retrieve All Vehicules",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/vehicule/retrieve-all-vehicules",
+              "host": ["{{baseUrl}}"],
+              "path": ["vehicule", "retrieve-all-vehicules"]
+            }
+          }
+        },
+        {
+          "name": "Retrieve Vehicule by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/vehicule/retrieve-vehicule/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["vehicule", "retrieve-vehicule", "1"]
+            }
+          }
+        },
+        {
+          "name": "Modify Vehicule",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idVehicule\": 1,\n  \"immatriculation\": \"220-TUN-1234\",\n  \"marque\": \"Volkswagen\",\n  \"modele\": \"Golf 8\",\n  \"categorie\": \"BERLINE\",\n  \"tarifJournalier\": 130.00,\n  \"statut\": \"LOUE\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/vehicule/modify-vehicule",
+              "host": ["{{baseUrl}}"],
+              "path": ["vehicule", "modify-vehicule"]
+            }
+          }
+        },
+        {
+          "name": "Remove Vehicule",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/vehicule/remove-vehicule/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["vehicule", "remove-vehicule", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reservation",
+      "item": [
+        {
+          "name": "Add Reservation",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dateDebut\": \"2026-10-20\",\n  \"dateFin\": \"2026-10-25\",\n  \"statut\": \"CONFIRMEE\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/reservation/add-reservation",
+              "host": ["{{baseUrl}}"],
+              "path": ["reservation", "add-reservation"]
+            }
+          }
+        },
+        {
+          "name": "Retrieve All Reservations",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/reservation/retrieve-all-reservations",
+              "host": ["{{baseUrl}}"],
+              "path": ["reservation", "retrieve-all-reservations"]
+            }
+          }
+        },
+        {
+          "name": "Retrieve Reservation by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/reservation/retrieve-reservation/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["reservation", "retrieve-reservation", "1"]
+            }
+          }
+        },
+        {
+          "name": "Remove Reservation",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/reservation/remove-reservation/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["reservation", "remove-reservation", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Contrat",
+      "item": [
+        {
+          "name": "Add Contrat",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dateSignature\": \"2026-10-16\",\n  \"montantTotal\": 600.00,\n  \"valide\": true\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/contrat/add-contrat",
+              "host": ["{{baseUrl}}"],
+              "path": ["contrat", "add-contrat"]
+            }
+          }
+        },
+        {
+          "name": "Retrieve All Contrats",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/contrat/retrieve-all-contrats",
+              "host": ["{{baseUrl}}"],
+              "path": ["contrat", "retrieve-all-contrats"]
+            }
+          }
+        },
+        {
+          "name": "Retrieve Contrat by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/contrat/retrieve-contrat/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["contrat", "retrieve-contrat", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Employe",
+      "item": [
+        {
+          "name": "Add Employe",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nom\": \"Trabelsi\",\n  \"prenom\": \"Sami\",\n  \"role\": \"GESTIONNAIRE\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/employe/add-employe",
+              "host": ["{{baseUrl}}"],
+              "path": ["employe", "add-employe"]
+            }
+          }
+        },
+        {
+          "name": "Retrieve All Employes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/employe/retrieve-all-employes",
+              "host": ["{{baseUrl}}"],
+              "path": ["employe", "retrieve-all-employes"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Equipement",
+      "item": [
+        {
+          "name": "Add Equipement",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"libelle\": \"GPS Navigation\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/equipement/add-equipement",
+              "host": ["{{baseUrl}}"],
+              "path": ["equipement", "add-equipement"]
+            }
+          }
+        },
+        {
+          "name": "Retrieve All Equipements",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/equipement/retrieve-all-equipements",
+              "host": ["{{baseUrl}}"],
+              "path": ["equipement", "retrieve-all-equipements"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Maintenance",
+      "item": [
+        {
+          "name": "Add Maintenance",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dateDebut\": \"2026-10-10\",\n  \"dateFin\": \"2026-10-12\",\n  \"description\": \"Vidange et changement de filtres\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/maintenance/add-maintenance",
+              "host": ["{{baseUrl}}"],
+              "path": ["maintenance", "add-maintenance"]
+            }
+          }
+        },
+        {
+          "name": "Retrieve All Maintenances",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/maintenance/retrieve-all-maintenances",
+              "host": ["{{baseUrl}}"],
+              "path": ["maintenance", "retrieve-all-maintenances"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Paiement",
+      "item": [
+        {
+          "name": "Add Paiement",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"montant\": 300.00,\n  \"datePaiement\": \"2026-10-16\",\n  \"modePaiement\": \"CARTE_BANCAIRE\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/paiement/add-paiement",
+              "host": ["{{baseUrl}}"],
+              "path": ["paiement", "add-paiement"]
+            }
+          }
+        },
+        {
+          "name": "Retrieve All Paiements",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/paiement/retrieve-all-paiements",
+              "host": ["{{baseUrl}}"],
+              "path": ["paiement", "retrieve-all-paiements"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

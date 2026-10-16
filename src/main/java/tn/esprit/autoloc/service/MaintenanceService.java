@@ -17,4 +17,15 @@ public interface MaintenanceService {
     void deleteMaintenance(Long idMaintenance);
 
     List<Maintenance> getMaintenancesByVehiculeId(Long idVehicule);
+
+    // ESPRIT convention methods
+    Maintenance addMaintenance(Maintenance maintenance);
+
+    Maintenance retrieveMaintenance(Long idMaintenance);
+
+    List<Maintenance> retrieveAllMaintenances();
+
+    Maintenance modifyMaintenance(Maintenance maintenance);
+
+    void removeMaintenance(Long idMaintenance);
 }

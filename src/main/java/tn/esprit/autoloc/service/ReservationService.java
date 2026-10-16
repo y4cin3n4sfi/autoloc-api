@@ -19,4 +19,15 @@ public interface ReservationService {
     List<Reservation> getReservationsByClientId(Long idClient);
 
     List<Reservation> getReservationsByVehiculeId(Long idVehicule);
+
+    // ESPRIT convention methods
+    Reservation addReservation(Reservation reservation);
+
+    Reservation retrieveReservation(Long idReservation);
+
+    List<Reservation> retrieveAllReservations();
+
+    Reservation modifyReservation(Reservation reservation);
+
+    void removeReservation(Long idReservation);
 }

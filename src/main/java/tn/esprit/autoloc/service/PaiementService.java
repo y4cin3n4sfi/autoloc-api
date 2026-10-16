@@ -17,4 +17,15 @@ public interface PaiementService {
     void deletePaiement(Long idPaiement);
 
     List<Paiement> getPaiementsByContratId(Long idContrat);
+
+    // ESPRIT convention methods
+    Paiement addPaiement(Paiement paiement);
+
+    Paiement retrievePaiement(Long idPaiement);
+
+    List<Paiement> retrieveAllPaiements();
+
+    Paiement modifyPaiement(Paiement paiement);
+
+    void removePaiement(Long idPaiement);
 }

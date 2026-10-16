@@ -15,4 +15,15 @@ public interface EquipementService {
     List<Equipement> getAllEquipements();
 
     void deleteEquipement(Long idEquipement);
+
+    // ESPRIT convention methods
+    Equipement addEquipement(Equipement equipement);
+
+    Equipement retrieveEquipement(Long idEquipement);
+
+    List<Equipement> retrieveAllEquipements();
+
+    Equipement modifyEquipement(Equipement equipement);
+
+    void removeEquipement(Long idEquipement);
 }

@@ -17,4 +17,15 @@ public interface ContratService {
     void deleteContrat(Long idContrat);
 
     Contrat getContratByReservationId(Long idReservation);
+
+    // ESPRIT convention methods
+    Contrat addContrat(Contrat contrat);
+
+    Contrat retrieveContrat(Long idContrat);
+
+    List<Contrat> retrieveAllContrats();
+
+    Contrat modifyContrat(Contrat contrat);
+
+    void removeContrat(Long idContrat);
 }

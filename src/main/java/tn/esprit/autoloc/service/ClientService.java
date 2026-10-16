@@ -19,4 +19,15 @@ public interface ClientService {
     Client getClientByEmail(String email);
 
     Client getClientByNumPermis(String numPermis);
+
+    // ESPRIT convention methods
+    Client addClient(Client client);
+
+    Client retrieveClient(Long idClient);
+
+    List<Client> retrieveAllClients();
+
+    Client modifyClient(Client client);
+
+    void removeClient(Long idClient);
 }
