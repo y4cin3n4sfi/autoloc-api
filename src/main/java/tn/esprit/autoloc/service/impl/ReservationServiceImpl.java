@@ -69,6 +69,7 @@ public class ReservationServiceImpl implements ReservationService {
     @Override
     @Transactional
     public Reservation addReservation(Reservation reservation) {
+        reservation.setIdReservation(null);
         return saveReservation(reservation);
     }
 

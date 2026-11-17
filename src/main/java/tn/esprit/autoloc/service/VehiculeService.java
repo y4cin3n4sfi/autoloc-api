@@ -30,4 +30,21 @@ public interface VehiculeService {
     Vehicule modifyVehicule(Vehicule vehicule);
 
     void removeVehicule(Long idVehicule);
+
+    // Atelier SOLID / GoF methods
+    Vehicule ajouter(Vehicule vehicule);
+
+    double calculerTarif(Vehicule vehicule, int nombreJours);
+
+    double calculerTarif(Vehicule vehicule, int nombreJours, String typeStrategie);
+
+    // Atelier Affectations / Désaffectations
+    Vehicule affecterVehicule(Long idVehicule, Long idAgence);
+
+    Vehicule desaffecterVehicule(Long idVehicule);
+
+    Vehicule affecterEquipement(Long idVehicule, Long idEquipement);
+
+    Vehicule desaffecterEquipement(Long idVehicule, Long idEquipement);
 }
+

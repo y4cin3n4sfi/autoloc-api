@@ -63,6 +63,7 @@ public class PaiementServiceImpl implements PaiementService {
     @Override
     @Transactional
     public Paiement addPaiement(Paiement paiement) {
+        paiement.setIdPaiement(null);
         return savePaiement(paiement);
     }
 

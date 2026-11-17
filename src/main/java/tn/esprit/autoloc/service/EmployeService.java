@@ -28,4 +28,10 @@ public interface EmployeService {
     Employe modifyEmploye(Employe employe);
 
     void removeEmploye(Long idEmploye);
+
+    // Affectation et désaffectation
+    Employe desaffecterEmploye(Long idEmploye);
+
+    Employe affecterEmploye(Long idEmploye, Long idAgence);
 }
+

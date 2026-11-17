@@ -55,6 +55,7 @@ public class EquipementServiceImpl implements EquipementService {
     @Override
     @Transactional
     public Equipement addEquipement(Equipement equipement) {
+        equipement.setIdEquipement(null);
         return saveEquipement(equipement);
     }
 

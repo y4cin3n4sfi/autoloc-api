@@ -72,6 +72,7 @@ public class ClientServiceImpl implements ClientService {
     @Override
     @Transactional
     public Client addClient(Client client) {
+        client.setIdClient(null);
         return saveClient(client);
     }
 

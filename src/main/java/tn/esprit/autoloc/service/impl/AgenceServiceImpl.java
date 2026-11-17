@@ -58,6 +58,7 @@ public class AgenceServiceImpl implements AgenceService {
     @Override
     @Transactional
     public Agence addAgence(Agence agence) {
+        agence.setIdAgence(null);
         return saveAgence(agence);
     }
 

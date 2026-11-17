@@ -64,6 +64,7 @@ public class ContratServiceImpl implements ContratService {
     @Override
     @Transactional
     public Contrat addContrat(Contrat contrat) {
+        contrat.setIdContrat(null);
         return saveContrat(contrat);
     }
 

@@ -63,6 +63,7 @@ public class MaintenanceServiceImpl implements MaintenanceService {
     @Override
     @Transactional
     public Maintenance addMaintenance(Maintenance maintenance) {
+        maintenance.setIdMaintenance(null);
         return saveMaintenance(maintenance);
     }
 
